@@ -6,39 +6,73 @@ body {
 }
 
 header {
-    background-color: #f8b400;
+    background-color: #FFFFFF;
     padding: 20px;
     text-align: center;
 }
 
 .dish-section {
+    position: relative;
     float: left;
-    width: 33.33%;
+    width: 32%;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #000;
     background-color: #f0f0f0;
     margin-bottom: 20px;
+    margin: 5px;
 }
 
 .section-title {
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
-    background-color: #4caf50;
     color: #fff;
     padding: 5px 10px;
     border: 1px solid #000;
+}
+
+.dish-section.chicken {
+    background-color: #808080; 
+    border-color: #000;
+}
+
+.section-title.chicken {
+    background-color: #F06FFF; 
+}
+
+.dish-section.beef {
+    background-color: #808080; 
+    border-color: #000; 
+}
+
+.section-title.beef {
+    background-color: #EC4E3E; 
+}
+
+.dish-section.sushi {
+    background-color: #808080; 
+    border-color: #000; 
+}
+
+.section-title.sushi {
+    background-color: #D5E141;
 }
 
 @media (max-width: 991px) {
     .dish-section {
         width: 50%;
     }
+    .dish-section.sushi {
+        width: 100%;
+        clear: both;
+    }
 }
 
 @media (max-width: 767px) {
     .dish-section {
         width: 100%;
+        clear: both; /* Clears the float from previous sections */
+        margin-bottom: 20px; /* Adds space between sections */
     }
 }
